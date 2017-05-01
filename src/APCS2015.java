@@ -13,18 +13,23 @@ public class APCS2015 {
     // PROBLEM # 26
     public static void changeIt(int [] arr, int val, String word) {
 
+        System.out.println("Location in memory before " + arr);
         System.out.print("Arr before: ");
 
+
         for (int i: arr) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
 
         arr = new int[5];
+        System.out.println("Location in memory after " +arr);
         // what happened to arr ^^^ ?
+
         System.out.print("Arr after: ");
         for (int i: arr) {
             System.out.print(i + " ");
         }
+
         System.out.println(); // formatting
 
         System.out.println("Value before it was redeclared: " + val);
@@ -33,8 +38,11 @@ public class APCS2015 {
 
         System.out.println("Value after it was redeclared: " + val);
 
+        System.out.println("Word before: " + word);
 
         word = word.substring(0, 5); // same thing again
+
+        System.out.println("Word after: " + word);
 
         for (int k = 0; k < arr.length; k++) {
             arr[k] = 0;
